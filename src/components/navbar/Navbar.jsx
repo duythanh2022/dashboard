@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/cryptocurrency.png";
-import { Avatar, Typography, Menu, Button } from "antd";
+import { Avatar, Typography, Menu, Button,Layout } from "antd";
 import {
   HomeOutlined,
   FundOutlined,
@@ -25,9 +25,11 @@ const Navbar = () => {
       setActiveMenu(true);
     }
   }, [screenSize]);
+  const { Header, Sider, Content } = Layout;
 
   return (
     <>
+   
       <div className={styles["nav-container"]}  style={{
         width: 256,
       }}>
@@ -42,7 +44,7 @@ const Navbar = () => {
             </Button>
           </div>
         </div>
-                <Menu theme="dark" inlineCollapsed={collapsed} mode="inline">
+                <Menu theme="dark" >
                 <Menu.Item key="home" icon={<HomeOutlined />}>
                   <Link to="/">Home</Link>
                 </Menu.Item>
@@ -57,6 +59,7 @@ const Navbar = () => {
                 </Menu.Item>
               </Menu>
       </div>
+     
     </>
   );
 };
