@@ -38,11 +38,6 @@ const Navbar = () => {
           <Typography.Title level={2} className={styles.logo}>
             <Link to="/">Crytoverse</Link>
           </Typography.Title>
-          <div className={styles["toggle-collapse"]}>
-            <Button className={styles["btn-toggle"]}  onClick={toggleCollapsed}>
-              {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-            </Button>
-          </div>
         </div>
                 <Menu theme="dark" >
                 <Menu.Item key="home" icon={<HomeOutlined />}>

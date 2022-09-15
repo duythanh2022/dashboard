@@ -1,26 +1,30 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link,  Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import { Layout, Menu } from "antd";
+import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import Exchanges from "./page/exchanges/exchanges";
 import Home from "./page/home";
+const { Header, Content, Footer, Sider } = Layout;
+
 function App() {
   return (
     <div className="App">
-      <div className="navbar">
-        <Navbar />
-      </div>
-      <div className="main">
+      <Layout>
+        <Sider>
+          <Navbar />
+        </Sider>
         <Layout>
-          <div className="routes">
+          <Content style={{ padding: '0 60px' }}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/" element={<Exchanges />} />
             </Routes>
-          </div>
+          </Content>
         </Layout>
-      </div>
-      <div className="footer"></div>
+
+        <Footer className="footer"></Footer>
+      </Layout>
     </div>
   );
 }

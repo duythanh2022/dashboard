@@ -1,0 +1,15 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.site-layout .site-layout-background {
+    background: #fff;
+}
+.App{
+    display: flex;
+    height: 100%;
+}
+.navbar{
+    flex: 1 0 10%;
+} */
