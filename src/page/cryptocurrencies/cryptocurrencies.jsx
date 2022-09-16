@@ -12,7 +12,6 @@ import styles from "./styles.module.scss";
 const Cryptocurrencies = ({ simplified }) => {
   const count = simplified ? 10 : 100;
   const { data, isFetching } = useGetCryptosQuery(count);
-  const { price, isFechPrice } = useGetCoinPriceQuery();
   const [cryptos, setCryptos] = useState();
 
   useEffect(() => {

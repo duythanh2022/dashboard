@@ -4,6 +4,7 @@ import Cryptocurrencies from "../cryptocurrencies/cryptocurrencies";
 import { Typography, Row, Col, Statistic } from "antd";
 import { useGetCryptosQuery } from "../../services/CryptoApi";
 import { Link } from "react-router-dom";
+import NewsCryptos from "../news/NewsCryptos";
 const { Title } = Typography;
 const Home = () => {
   const { data, isFech } = useGetCryptosQuery(10);
@@ -52,6 +53,7 @@ const Home = () => {
         <Title level={2} className="home-title">Latest Crypto News</Title>
         <Title level={3}><Link to="/news">Show more</Link></Title>
       </div>
+      <NewsCryptos simplified/>
     </>
   );
 };
