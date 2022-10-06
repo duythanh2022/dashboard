@@ -1,32 +1,15 @@
-import React, { useState,useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/cryptocurrency.png";
-import { Avatar, Typography, Menu, Button,Layout } from "antd";
+import { Avatar, Typography, Menu } from "antd";
 import {
   HomeOutlined,
   FundOutlined,
   MoneyCollectOutlined,
   BulbOutlined,
-  MenuUnfoldOutlined,
-  MenuFoldOutlined,
 } from "@ant-design/icons";
 import styles from "./styles.module.scss";
 const Navbar = () => {
-  const [collapsed, setCollapsed] = useState(false);
-  const [activeMenu, setActiveMenu] = useState(true);
-  const [screenSize, setScreenSize] = useState(undefined);
-  const toggleCollapsed = () => {
-    setCollapsed(!collapsed);
-  };
-  useEffect(() => {
-    if (screenSize <= 800) {
-      setActiveMenu(false);
-    } else {
-      setActiveMenu(true);
-    }
-  }, [screenSize]);
-  const { Header, Sider, Content } = Layout;
-
   return (
     <>
    

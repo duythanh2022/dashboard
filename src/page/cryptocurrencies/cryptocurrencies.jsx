@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { Card, Row, Col, Input } from "antd";
+import { Card, Row, Col } from "antd";
 import {
   useGetCryptosQuery,
-  useGetCoinPriceQuery,
 } from "../../services/CryptoApi";
 import millify from "millify";
 import Loader from "../../components/loader/loader";
@@ -10,7 +9,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import styles from "./styles.module.scss";
 const Cryptocurrencies = ({ simplified }) => {
-  const count = simplified ? 10 : 100;
+  const count = simplified ? 12 : 100;
   const { data, isFetching } = useGetCryptosQuery(count);
   const [cryptos, setCryptos] = useState();
 

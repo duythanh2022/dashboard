@@ -1,11 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-import { Layout, Menu } from "antd";
+import {  Route, Routes } from "react-router-dom";
+import { Layout } from "antd";
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import Exchanges from "./page/exchanges/exchanges";
 import Home from "./page/home";
-const { Header, Content, Footer, Sider } = Layout;
+const {  Content, Footer, Sider } = Layout;
 
 function App() {
   return (
@@ -22,7 +22,6 @@ function App() {
             </Routes>
           </Content>
         </Layout>
-
         <Footer className="footer"></Footer>
       </Layout>
     </div>
