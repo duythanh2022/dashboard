@@ -18,7 +18,7 @@ function App() {
           <Content style={{ padding: '0 60px' }}>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/" element={<Exchanges />} />
+              <Route path="/exchanges" element={<Exchanges />} />
             </Routes>
           </Content>
         </Layout>
